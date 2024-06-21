@@ -14,9 +14,6 @@ jobs:
     environment: Default
 
     steps:
-      - name: "Echo vars"
-        run: echo $TOKEN $USERNAME
-
       - name: Checkout repository
         uses: actions/checkout@v2
 
@@ -37,4 +34,5 @@ jobs:
       - name: Publish to GitHub Packages
         run: ./gradlew publish
         env:
-          GITHUB_TOKEN: ${{ secrets.TOKEN }}
+            TOKEN: ${{ secrets.TOKEN }}
+            USERNAME: ${{ secrets.USERNAME }}
