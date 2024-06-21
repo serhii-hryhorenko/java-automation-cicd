@@ -15,7 +15,7 @@ jobs:
 
     steps:
       - name: "Echo vars"
-        run: echo "$TOKEN $USERNAME"
+        run: echo $TOKEN $USERNAME
 
       - name: Checkout repository
         uses: actions/checkout@v2
